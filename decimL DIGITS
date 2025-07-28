@@ -1,0 +1,38 @@
+Diya wants to know how the decimal digit values are performing in programming.could you please help her to learn the decimal formatting.
+
+Input Format
+
+input consists of float
+Constraints
+
+No Constraints
+
+Output Format
+
+execute the values depends on the sample output format.
+Sample Input 0
+
+45.3456
+Sample Output 0
+
+45.34
+45.35
+
+import java.util.Scanner;
+import java.io.*;
+
+public class Decimal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double num = sc.nextDouble();
+
+        double t = Math.floor(num * 100) / 100.0;
+
+        double round = Math.round(num * 100.0) / 100.0;
+
+        DecimalFormat df = new Decimal("0.00");
+
+        System.out.println(df.format(t));
+        System.out.println(df.format(round));
+    }
+}
